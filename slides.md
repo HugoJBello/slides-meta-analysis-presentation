@@ -26,11 +26,11 @@ Tomamos nota de los datos y elaboramos la siguente tabla
 
 |estudio|tamaño experimental|media hospitalización experimental| $\sigma$ hospitalización experimental|tamaño placebo|media hospitalización placebo| $\sigma$ hospitalización placebo|
 |-|-|-|-|-|-|-|
-|(1) John Doe et Al.</sub>|20|**10**|3.5|20|**8**|3.1|
-|(2) Jack Down et Al.|15|**9**|4.5|15|**6**|2.5|
-|(3) Jane Dew et Al.|17|**6**|3.5|17|**2**|2.7|
-|(4) Joseph Dick et Al.|30|**12**|2.2|28|**8**|2.8|
-|(5) Jonas Dash et Al.|32|**17**|4.5|25|**19**|3.1|
+|(1) John Doe et Al.</sub>|20|**8** |3.5|20|**10**|3.1|
+|(2) Jack Down et Al.     |15|**9** |4.5|15|**12**|2.5|
+|(3) Jane Dew et Al.      |17|**7** |3.5|17|**9** |2.7|
+|(4) Joseph Dick et Al.   |30|**12**|2.2|28|**15**|2.8|
+|(5) Jonas Dash et Al.    |32|**12**|4.5|31|**9**|3.1|
 
 # Ejemplo (observaciones a simple vista)
 
