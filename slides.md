@@ -65,5 +65,5 @@ $$
 
 donde
 $$
-S_\text{agrupado}
+S_\text{agrupado} = \frac{(n_{\text{exp}} - 1) S_{\text{exp}} + (n_{\text{control}} - 1) S_{\text{control}}}{n_\text{exp} + n_\text{control} +2}
 $$
