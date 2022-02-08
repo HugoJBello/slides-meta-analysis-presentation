@@ -56,14 +56,43 @@ an effect size is a number measuring the strength of the relationship between tw
 
 A continuación definiremos el tamaño de efecto más común en nuestro contexto: la **d de Cohen**
 
-# d de Cohen
+# d de Cohen. Definición
 
 Se define como 
 $$
-\frac{\overline{X}_{\text{exp}} - \overline{X}_{\text{control}}}{S_\text{agrupado}}
+d = \frac{\overline{X}_{\text{exp}} - \overline{X}_{\text{control}}}{S_\text{agrupado}}
 $$
 
 donde
 $$
 S_\text{agrupado} = \frac{(n_{\text{exp}} - 1) S_{\text{exp}} + (n_{\text{control}} - 1) S_{\text{control}}}{n_\text{exp} + n_\text{control} +2}
 $$
+
+# d de Cohen. Ejemplo anterior
+
+|estudio|d de Cohen|
+|-|-|-|-|-|-|-|
+|(1) John Doe et Al.</sub>|-0.60|
+|(2) Jack Down et Al.     |-0.85|
+|(3) Jane Dew et Al.      |-0.64|
+|(4) Joseph Dick et Al.   |-1.20|
+|(5) Jonas Dash et Al.    |**0.78**|
+
+## Interpretación
+
+- Vemos que los estudios (1), (2), (3), (4) tienen d de Cohen negativo $\Rightarrow$ el número de días de hospitalización  es mayor en el grupo experimental que en el de control ($\overline{X}_{\text{exp}} - \overline{X}_{\text{control}}$)
+- En el estudio (5) ocurre lo contrario
+
+
+# Modelos en metaanálisis: Fixed effects y Random Effects
+
+
+
+# Pasos para elaborar un metaanálisis:
+
+- Formulación de la pregunta de investigación teniendo en cuenta el modelo PICO: *Poblacion, intervencion, comparación y resultado*
+- Busqueda en la literatura
+- Selección de estudios
+- Decisión de qué variables o medidas se van a usar: por ej. (medias, diferencias, desviación típica). Normalmente usaremos media y desviación típica.
+- Selección de modelo de meta análisis: *Fixed effects* o *random effects*.
+- Analizar la heterogeneidad.
