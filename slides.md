@@ -83,9 +83,127 @@ $$
 - Vemos que los estudios (1), (2), (3), (4) tienen d de Cohen negativo $\Rightarrow$ el número de días de hospitalización  es mayor en el grupo experimental que en el de control ($\overline{X}_{\text{exp}} - \overline{X}_{\text{control}}$)
 - En el estudio (5) ocurre lo contrario
 
-
 # Modelos en metaanálisis: Fixed effects y Random Effects
 
+# R: Tamaño del efecto, Fixed effects y Random Effects
+
+
+Para poder hacer metaanálisis en r debemos primero instalar varias librerías:
+
+    install.packages("meta")
+    install.packages("metafor")
+    install.packages("tidyverse")
+    # sudo apt-get install libnlopt-dev
+
+
+    library("meta")
+    library("metafor")
+    library("tidyverse")
+
+# R: cargar datos
+
+cargamos los datos, suponiendo que los tenemos guardados en un csv como este:
+
+    estudio;n_exp;media_exp;sd_exp;n_control;media_control;sd_control
+    John Doe et Al.   ;20;8 ;3.5;20;10;3.1
+    Jack Down et Al.  ;15;9 ;4.5;15;12;2.5
+    Jane Dew et Al.   ;17;7 ;3.5;17;9 ;2.7
+    Joseph Dick et Al.;30;12;2.2;28;15;2.8
+    Jonas Dash et Al. ;32;12;4.5;31;9 ;3.1
+
+introducimos el siguiente comando para que nos lo lea
+
+    data <- read.csv("./estudios.csv",  header=TRUE, sep=";")
+
+# R: Fixed effects
+
+    m.dl <- meta::metacont(n_exp,
+                       media_exp,
+                       sd_exp,
+                       n_control,
+                       media_control,
+                       sd_control,
+                       data=data,
+                       studlab=paste(estudio),
+                       fixed = FALSE,
+                       random = TRUE,
+                       method.tau = "SJ",
+                       hakn = TRUE,
+                       prediction = TRUE,
+                       sm = "SMD")
+
+# R: Resultado Fixed Effects
+
+        Number of studies combined: k = 5
+        Number of observations: o = 225
+
+                                SMD             95%-CI     z p-value
+        Common effect model -0.3790 [-0.6527; -0.1054] -2.71  0.0066
+        Prediction interval         [-2.8887;  1.9473]              
+
+        Quantifying heterogeneity:
+        tau^2 = 0.4638 [0.1202; 4.4177]; tau = 0.6810 [0.3466; 2.1018]
+        I^2 = 86.3% [70.0%; 93.7%]; H = 2.70 [1.83; 3.98]
+
+        Test of heterogeneity:
+            Q d.f.  p-value
+        29.10    4 < 0.0001
+
+        Details on meta-analytical method:
+        - Inverse variance method
+        - Sidik-Jonkman estimator for tau^2
+        - Q-profile method for confidence interval of tau^2 and tau
+        - Hedges' g (bias corrected standardised mean difference; using exact formulae)
+
+# R: Forest plot Fixed Effects
+
+![data/forest_plot_random_effects.png](data/forest_plot_random_effects.png)
+
+
+# R: Random Effects
+
+    m.dl <- meta::metacont(n_exp,
+                       media_exp,
+                       sd_exp,
+                       n_control,
+                       media_control,
+                       sd_control,
+                       data=data,
+                       studlab=paste(estudio),
+                       fixed = TRUE,
+                       random = FALSE,
+                       method.tau = "SJ",
+                       hakn = TRUE,
+                       prediction = TRUE,
+                       sm = "SMD")
+
+# R: Resultado Random Effects
+
+        Number of studies combined: k = 5
+        Number of observations: o = 225
+
+                                SMD            95%-CI     t p-value
+        Random effects model -0.4707 [-1.4103; 0.4689] -1.39  0.2366
+        Prediction interval          [-2.8887; 1.9473]              
+
+        Quantifying heterogeneity:
+        tau^2 = 0.4638 [0.1202; 4.4177]; tau = 0.6810 [0.3466; 2.1018]
+        I^2 = 86.3% [70.0%; 93.7%]; H = 2.70 [1.83; 3.98]
+
+        Test of heterogeneity:
+            Q d.f.  p-value
+        29.10    4 < 0.0001
+
+        Details on meta-analytical method:
+        - Inverse variance method
+        - Sidik-Jonkman estimator for tau^2
+        - Q-profile method for confidence interval of tau^2 and tau
+        - Hartung-Knapp adjustment for random effects model
+        - Hedges' g (bias corrected standardised mean difference; using exact formulae)
+
+# R: Forest plot Random Effects
+
+![data/forest_fixed_effect.png](data/forest_fixed_effect.png)
 
 
 # Pasos para elaborar un metaanálisis:
