@@ -202,7 +202,7 @@ introducimos el siguiente comando para que nos lo lea
     forest(m.dl)
 
 
-![data/forest_plot_random_effects.png](data/forest_plot_random_effects.png)
+![Gráfico fixed effects](data/forest_fixed_effects.png)
 
 
 # Metaanálisis en R: Random Effects
@@ -253,7 +253,7 @@ introducimos el siguiente comando para que nos lo lea
     forest(m.dl)
 
 
-![data/forest_fixed_effect.png](data/forest_fixed_effect.png)
+![Gráfico random effects](data/forest_random_effect.png)
 
 
 # Conclusión:  pasos para elaborar un metaanálisis:
