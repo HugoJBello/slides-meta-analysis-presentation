@@ -20,8 +20,8 @@ m.dl <- meta::metacont(n_exp,
                        sd_control,
                        data=data,
                        studlab=paste(estudio),
-                       fixed = FALSE,
-                       random = TRUE,
+                       fixed = TRUE,
+                       random = FALSE,
                        method.tau = "SJ",
                        hakn = TRUE,
                        prediction = TRUE,
@@ -40,13 +40,13 @@ m.dl <- meta::metacont(n_exp,
                        sd_control,
                        data=data,
                        studlab=paste(estudio),
-                       fixed = TRUE,
-                       random = FALSE,
+                       fixed = FALSE,
+                       random = TRUE,
                        method.tau = "SJ",
                        hakn = TRUE,
                        prediction = TRUE,
                        sm = "SMD")
-# Random effects model -0.0587 [-0.6938; 0.5765] -0.21  0.8367
-# !!!!
+
 m.dl
 forest(m.dl)
+
