@@ -91,9 +91,20 @@ $$
 - Vemos que los estudios (1), (2), (3), (4) tienen d de Cohen negativo $\Rightarrow$ el número de días de hospitalización  es mayor en el grupo experimental que en el de control ($\overline{X}_{\text{exp}} - \overline{X}_{\text{control}}$)
 - En el estudio (5) ocurre lo contrario
 
-# Modelos en metaanálisis: Fixed effects y Random Effects
+# Modelos en metaanálisis: Funcionamiento
 
 Ya hemos entendido el concepto del tamaño de efecto. En la práctica necesitamos un *modelo* que nos diga si el tamaño del efecto es significativo o no, esto es, si el tratamiento produce un efecto notable sobre la variable que estamos estudiando. 
+
+los modelos en este caso funcionan como un test de hipótesis en el que:
+
+-  **la hipótesis nula**: El tratamiento no ha funcionado, es decir que el tamaño de efecto es $0$ para todos los estuos
+-  **hipótesis alternativa**: El tratamiento ha funcionado, el tamaño del efecto es distinto de 0.
+
+Como sabemos, los test de hipótesis resultan en un p-valor. Si este p-valor es menor que el nivel de significación $0.05$, rechazamos la hipótesis nula, de lo contrario la aceptamos.
+
+
+# Modelos en metaanálisis: Fixed effects y Random Effects
+
 
 Vamos a entender los dos modelos más comunes *Fixed Effects* y *Random effects*. La diferencia fundamental entre ambos radica en asumir si los estudios son homogéneos.
 
@@ -101,14 +112,6 @@ Vamos a entender los dos modelos más comunes *Fixed Effects* y *Random effects*
 
 - **Random Effects**. Asume que los estudios fueron realizados sobre poblaciones que difieren mucho unos de otros e maneras que pueden influir en el efecto del tratamiento. Factores como variaciones en la *edad*, *intensidad del tratamiento*... $T_i = \mu + \psi_i +  \epsilon_i$
 
-# Modelos en metaanálisis: Funcionamiento
-
-los modelos anteriormente explicados funcionan como un test de hipótesis en el que:
-
--  **la hipótesis nula**: El tratamiento no ha funcionado, es decir que el tamaño de efecto es $0$ para todos los estuos
--  **hipótesis alternativa**: El tratamiento ha funcionado, el tamaño del efecto es distinto de 0.
-
-Como sabemos, los test de hipótesis resultan en un p-valor. Si este p-valor es menor que el nivel de significación $0.05$, rechazamos la hipótesis nula, de lo contrario la aceptamos.
 
 <!--
 
