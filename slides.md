@@ -269,3 +269,9 @@ introducimos el siguiente comando para que nos lo lea
 - Field, A.P. and Gillett, R. (2010), How to do a meta-analysis. British Journal of Mathematical and Statistical Psychology, 63: 665-694. https://doi.org/10.1348/000711010X502733
 - Tufanaru, Catalin MD, MPH, MClinSci (EBHC); Munn, Zachary PhD; Stephenson, Matthew PhD; Aromataris, Edoardo PhD Fixed or random effects meta-analysis? Common methodological issues in systematic reviews of effectiveness, International Journal of Evidence-Based Healthcare: September 2015 - Volume 13 - Issue 3 - p 196-207 doi: 10.1097/XEB.0000000000000065 
 - A basic introduction to fixed-effect and random-effects models for meta-analysis. Michael Borenstein, Larry V. Hedges, Julian P.T Higgins, Hannah Rothstein. Research Synthesis Methods Volume 1, Issue 2, pages 97–111, April/June 2010
+
+# Materiales
+Los materiales de esta charla están disponibles en:
+
+
+[https://github.com/HugoJBello/materiales_charla_introduccion_metaanalisis](https://github.com/HugoJBello/materiales_charla_introduccion_metaanalisis)
