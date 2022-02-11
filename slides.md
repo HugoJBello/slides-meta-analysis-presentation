@@ -73,7 +73,7 @@ $$
 
 donde
 $$
-S_\text{agrupado} = \frac{(n_{\text{exp}} - 1) S_{\text{exp}} + (n_{\text{control}} - 1) S_{\text{control}}}{n_\text{exp} + n_\text{control} +2}
+S_\text{agrupado} = \sqrt{\frac{(n_{\text{exp}} - 1) S^2_{\text{exp}} + (n_{\text{control}} - 1) S^2_{\text{control}}}{n_\text{exp} + n_\text{control} +2}}
 $$
 
 # Introducción. d de Cohen. Ejemplo anterior
@@ -81,10 +81,11 @@ $$
 |estudio|d de Cohen|
 |-|-|
 |(1) John Doe et Al.</sub>|-0.60|
-|(2) Jack Down et Al.     |-0.85|
-|(3) Jane Dew et Al.      |-0.64|
+|(2) Jack Down et Al.     |-0.82|
+|(3) Jane Dew et Al.      |-0.63|
 |(4) Joseph Dick et Al.   |-1.20|
-|(5) Jonas Dash et Al.    |**0.78**|
+|(5) Jonas Dash et Al.    |**0.77**|
+
 
 ## Interpretación
 
